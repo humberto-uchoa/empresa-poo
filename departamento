@@ -1,0 +1,76 @@
+package br.com.uchoa;
+
+public class departamento {
+
+    public void departamento(String string) {
+        
+    }
+
+    public void adicionarfuncionario(funcionario funcionario1) {
+      
+        throw new UnsupportedOperationException("Unimplemented method 'adicionarfuncionario'");
+    }
+
+    public void daraumento(int i) {
+        
+        throw new UnsupportedOperationException("Unimplemented method 'daraumento'");
+    }
+
+    public funcionario[] getfuncionarios() {
+      
+        throw new UnsupportedOperationException("Unimplemented method 'getfuncionarios'");
+    }
+
+    private string nome;
+    private funcionario[] funcionario = new funcionario[100];
+    private int totalfuncionarios = 0;
+
+    public departamento(string nome){
+        this.nome = nome;
+        
+    }
+
+    public departamento(String string) {
+        
+    }
+
+    public string getnome(){
+        return nome;
+
+    }
+
+    public void setnome(string nome){
+        this.nome = nome;
+
+    }
+
+    
+    public void adicionarfuncionario(){
+        if(totalfuncionarios <100){
+
+        }else{
+            System.out.println("Limite atingido");
+
+        }
+
+    }
+
+
+    public void removerFuncionario(funcionario funcionario){
+        for (int i=0;i < totalfuncionarios; i++){
+           Object[] funcionarios;
+        if(funcionarios[i].equals(funcionario)){
+              funcionarios[i] = [totalfuncionarios -1];
+              funcionarios[totalfuncionarios -1]= null;
+              totalfuncionarios--;
+              break;
+           }
+        }
+    }
+
+    public void daraumento(double percentual){
+        for(int i = 0; i< totalfuncionarios; i++){
+            funcionario[i].daraumento(percentual);
+        }
+    }
+}

@@ -1,0 +1,38 @@
+package br.com.uchoa;
+
+public class main {
+   
+    
+    public static Object Void (string[] args){
+        empresa empresa = new empresa("empresa 1","12345678000100");
+        departamento rh = new departamento("Recursos Hmanos");
+        departamento ti = new departamento("tecnologia da imformação");
+        departamento adm = new departamento("administrativo");
+
+        empresa.adicionardepartamento(rh);
+        empresa.adicionardepartamento(ti);
+        empresa.adicionardepartamento(adm);
+
+        funcionario funcionario1 = new funcionario("Marcio", 2500.0, new dataadimissao());
+        funcionario funcionario2 = new funcionario("Marcus", 3000.0, new dataadimissao());
+        funcionario funcionario3 = new funcionario("walter", 3200.0, new dataadimissao());
+
+        rh.adicionarfuncionario(funcionario1);
+        ti.adicionarfuncionario(funcionario2);
+        adm.adicionarfuncionario(funcionario3);
+
+        System.out.println("salario de Marcio antes do aumento:" + funcionario1.getsalario());
+        rh.daraumento(10);
+        System.out.println("salario de Marcio com almento: " + funcionario1.getsalario());
+
+        empresa.trasferirfuncionario(funcionario2, ti, rh);
+        System.out.println("Funcionario do RH após transferência: ");
+        for(funcionario f :  rh.getfuncionarios()){
+            if(f != null){
+                System.out.println(f.getnome());
+            }
+        }
+        return null;
+    }    
+        
+}

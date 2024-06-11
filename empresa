@@ -1,0 +1,70 @@
+package br.com.uchoa;
+
+public class empresa {
+    public empresa(String string, String string2) {
+       
+    }
+ 
+    
+    public void trasferirfuncionario(funcionario funcionario2, departamento ti, departamento rh, departamento adm) {
+        
+        throw new UnsupportedOperationException("Unimplemented method 'trasferirfuncionario'");
+    }
+
+
+    private string nome;
+    private string cnpj;
+    private departamento [] departamentos = new departamento[10];
+    private int totalDepartamentos = 0;
+
+    public empresa(string nome, string cnpj){
+        this.nome = nome;
+        this.cnpj = cnpj;
+    }
+    
+    public string getnome(){
+        return nome;
+    
+    }
+
+    public void setnome(string nome){
+        this.nome = nome;
+
+    }
+
+    public string getcnpj(){
+        return cnpj;
+
+    }
+
+    public void setcnpj(string cnpj){
+        this.cnpj = cnpj;
+
+    }
+
+    
+    
+   
+    
+    public departamento[] getDepartamentos(){
+        return departamentos;
+
+    }
+
+    public void adicionardepartamento(departamento departamento){
+        if(totalDepartamentos <10){
+            departamentos[totalDepartamentos++] = departamento;
+            
+        }else{
+            System.out.println("Limite de departamentos atingido.");
+        }
+    }
+
+   
+    
+    public void trasferirfuncionario(funcionario funcionario,departamento de , departamento para){
+        de.removerFuncionario(funcionario);
+        para.adicionarfuncionario(funcionario);
+    }
+
+}

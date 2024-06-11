@@ -1,0 +1,57 @@
+package br.com.uchoa;
+import java.util.Date;
+public class funcionario {
+
+    public funcionario(String string, double d, dataadimissao dataadimissao) {
+        
+    }
+
+    public char[] getnome() {
+        
+        throw new UnsupportedOperationException("Unimplemented method 'getnome'");
+    }
+
+    public String getsalario() {
+       
+        throw new UnsupportedOperationException("Unimplemented method 'getsalario'");
+    }
+
+    private string nome;
+    private double salario;
+    private Date dataadmisao;
+
+    public funcionario(string nome , double salario, Date dataadmissao){
+        this.nome = nome;
+        this.salario = salario;
+        this.dataadmisao = dataadmissao;
+    }
+
+    public string getNome(){
+        return nome;
+
+    }
+
+    public void setnome(string nome){
+        this.nome = nome;
+
+    }
+
+    public void setsalario(double salario){
+        this.salario = salario;
+
+    }
+
+    public Date getDataadmissao(){
+        return dataadmisao;
+
+    }
+
+    public void setDataadmissao(Date dataadmissao){
+        this.dataadmisao = dataadmissao;
+
+    }
+
+    public void daraumento(double percentual){
+        this.salario += this.salario*percentual/100;
+    }
+}
